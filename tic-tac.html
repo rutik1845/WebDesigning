@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <style>
+        .grid-container
+{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height :400px;
+    background-color:aqua;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-content: center;
+    text-align: center;
+   
+}
+.griditem
+{
+
+    align-items: center;
+    justify-content: center;
+   
+
+}
+.griditem button
+{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 100%;
+   height: 100px;
+   width: 100px;
+   font-size: 60px;
+   text-align: center;
+   text-decoration:solid;
+}
+
+.reset{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+</style>
+<script>
+    var z =x;
+    function check()
+    {
+        if(document.getElementById("1").innerHTML=="o" && document.getElementById("2").innerHTML=="o" && document.getElementById("3").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("4").innerHTML=="o" && document.getElementById("5").innerHTML=="o" && document.getElementById("6").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("7").innerHTML=="o" && document.getElementById("8").innerHTML=="o" && document.getElementById("9").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("1").innerHTML=="o" && document.getElementById("4").innerHTML=="o" && document.getElementById("7").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("2").innerHTML=="o" && document.getElementById("5").innerHTML=="o" && document.getElementById("8").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("3").innerHTML=="o" && document.getElementById("6").innerHTML=="o" && document.getElementById("9").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("1").innerHTML=="o" && document.getElementById("5").innerHTML=="o" && document.getElementById("9").innerHTML=="o")
+{
+    alert("o is winner");
+}
+else if(document.getElementById("3").innerHTML=="o" && document.getElementById("5").innerHTML=="o" && document.getElementById("7").innerHTML=="o")
+{
+    alert("o is winner");
+}
+
+
+else if(document.getElementById("1").innerHTML=="x" && document.getElementById("2").innerHTML=="x" && document.getElementById("3").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("4").innerHTML=="x" && document.getElementById("5").innerHTML=="x" && document.getElementById("6").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("7").innerHTML=="x" && document.getElementById("8").innerHTML=="x" && document.getElementById("9").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("1").innerHTML=="x" && document.getElementById("4").innerHTML=="x" && document.getElementById("7").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("2").innerHTML=="x" && document.getElementById("5").innerHTML=="x" && document.getElementById("8").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("3").innerHTML=="x" && document.getElementById("6").innerHTML=="x" && document.getElementById("9").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("1").innerHTML=="x" && document.getElementById("5").innerHTML=="x" && document.getElementById("9").innerHTML=="x")
+{
+    alert("x is winner");
+}
+else if(document.getElementById("3").innerHTML=="x" && document.getElementById("5").innerHTML=="x" && document.getElementById("7").innerHTML=="x")
+{
+    alert("x is winner");
+}
+
+// else{
+//     alert("game is tie!!")
+// }
+
+    }
+
+    
+function display(a)
+{
+document.getElementById(a).innerHTML = document.getElementById("hiddenvalue").innerHTML;
+
+if (document.getElementById("hiddenvalue").innerHTML=="o")
+{
+    document.getElementById("hiddenvalue").innerHTML="x"
+}
+else
+{
+    document.getElementById("hiddenvalue").innerHTML="o"
+}
+check();
+
+}
+
+function reset(){
+    document.getElementById("1").innerHTML="";
+    document.getElementById("2").innerHTML="";
+    document.getElementById("3").innerHTML="";
+    document.getElementById("4").innerHTML="";
+    document.getElementById("5").innerHTML="";
+    document.getElementById("6").innerHTML="";
+    document.getElementById("7").innerHTML="";
+    document.getElementById("8").innerHTML="";
+    document.getElementById("9").innerHTML="";
+}
+
+
+</script>
+    </head>
+    <body>
+    <p style="visibility: hidden;" id="hiddenvalue">x</p>
+<div class="grid-container">
+    <div class="griditem"><button name="1" value="1" id="1" onclick="display(1)"></button></div>
+    <div class="griditem"><button name="2" value="2" id="2" onclick="display(2)"> </button></div>
+    <div class="griditem"><button name="3" value="3" id="3" onclick="display(3)"> </button></div>
+    <div class="griditem"><button name="4" value="4" id="4" onclick="display(4)"> </button></div>
+    <div class="griditem"><button name="5" value="5" id="5" onclick="display(5)"> </button></div>
+    <div class="griditem"><button name="6" value="6" id="6" onclick="display(6)"> </button></div>
+    <div class="griditem"><button name="7" value="7" id="7" onclick="display(7)"> </button></div>
+    <div class="griditem"><button name="8" value="8" id="8" onclick="display(8)"> </button></div>
+    <div class="griditem"><button name="9" value="9" id="9" onclick="display(9)"> </button></div>
+</div>
+<div class="reset"><button id="reset" name="reset" value="reset" onclick="reset()">Reset</button></div>
+    </body>
+</html>
