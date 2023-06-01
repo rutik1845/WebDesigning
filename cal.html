@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+            height: 500px;
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+        }
+        .imgbox
+        {
+            width: 200px;
+            height: 150px;
+            background-color: orangered;
+            margin-left: auto;
+            margin-top: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            z-index: 4;
+        }
+
+        .text
+        {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: transparent;
+            margin-left: auto;
+            margin-top: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            z-index: 1;
+        }
+
+        .imgbox .imgs
+        {
+            width:200px;
+            height:150px;
+            transition-property: width, height;
+            z-index: 1;
+
+        }
+        .imgbox .imgs:hover
+        {
+            opacity: 0.5;
+        }
+        .btns
+        {
+            width: 300px;
+            justify-content: center;
+            margin-left: 300px;
+        }
+        .btns button
+        {
+            width: 100px;
+            background-color: lawngreen;
+        }
+
+               
+    </style>
+
+    <script>
+        function first(){
+        document.getElementById("1").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/archons.JFIF')";
+        document.getElementById("1").style.backgroundSize="200px 150px";
+        document.getElementById("2").style.backgroundImage="url('C:/Users/Admin/Desktop/Genshin/download (1).JFIF')";
+        document.getElementById("2").style.backgroundSize="200px 150px";
+        document.getElementById("3").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/♡︎.JFIF')";
+        document.getElementById("3").style.backgroundSize="200px 150px";
+        document.getElementById("4").style.backgroundImage="url('C:/Users/Admin/Desktop/Genshin/download (1).JFIF')";
+        document.getElementById("4").style.backgroundSize="200px 150px";
+        document.getElementById("5").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/archons.JFIF')";
+        document.getElementById("5").style.backgroundSize="200px 150px";
+        document.getElementById("6").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/♡︎.JFIF')";
+        document.getElementById("6").style.backgroundSize="200px 150px";
+            }
+        
+       function cards(){
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(i.toString()).style.backgroundImage="url()"
+        }
+        }
+        let i  = 1;
+        function choose(a){
+          
+          document.getElementById(a).innerHTML = i++;
+
+          win();
+        }
+
+        function win()
+        {
+            if(document.getElementById("1").innerHTML=="1" && document.getElementById("2").innerHTML=="3" && document.getElementById("3").innerHTML=="5" && document.getElementById("4").innerHTML=="4" && document.getElementById("5").innerHTML=="2" && document.getElementById("6").innerHTML=="6")
+            {
+                document.getElementById("winn").innerHTML="You Won"
+            }
+            else
+            {
+                document.getElementById("winn").innerHTML="You Lost Try again"
+            }
+        }
+
+        function erase() {
+            i=1;
+            
+          }
+
+        function Restart() {
+            
+            
+                for (let j = 1; j <= 6; j++) {
+                    document.getElementById(j.toString()).innerHTML = "";
+                }
+            document.getElementById("1").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/archons.JFIF')"
+            document.getElementById("1").style.backgroundSize="200px 150px";
+            document.getElementById("2").style.backgroundImage="url('C:/Users/Admin/Desktop/Genshin/download (1).JFIF')";
+        document.getElementById("2").style.backgroundSize="200px 150px";
+        document.getElementById("3").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/♡︎.JFIF')";
+        document.getElementById("3").style.backgroundSize="200px 150px";
+        document.getElementById("4").style.backgroundImage="url('C:/Users/Admin/Desktop/Genshin/download (1).JFIF')";
+        document.getElementById("4").style.backgroundSize="200px 150px";
+        document.getElementById("5").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/archons.JFIF')";
+        document.getElementById("5").style.backgroundSize="200px 150px";
+        document.getElementById("6").style.backgroundImage="url('E:/GTA/to-do-app-master/todo/♡︎.JFIF')";
+        document.getElementById("6").style.backgroundSize="200px 150px";
+          }   
+    </script>
+</head>
+<body onload="first()">
+    <div id="winn"></div>
+    <p style="visibility: hidden;" id="hiddenvalue">X</p>
+    <div id="container">
+        <div class="imgbox" id="1" onclick="choose(1)" ></div>
+        <div class="imgbox" id="2" onclick="choose(2)"></div>
+        <div class="imgbox" id="3" onclick="choose(3)"></div>
+        <div class="imgbox" id="4" onclick="choose(4)"></div>
+        <div class="imgbox" id="5" onclick="choose(5)"></div>
+        <div class="imgbox" id="6" onclick="choose(6)"></div>
+       
+        <div class="btns"><button onclick="cards()">Start</button></div>
+        <div class="btns"><button onclick="Restart()">Restart</button></div>
+    </div>
+
+</body>
+</html>
